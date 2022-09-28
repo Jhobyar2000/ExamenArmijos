@@ -57,6 +57,7 @@ namespace ExamenArmijos.model
             {
                 int categoria = 1;
                 int numero = Int32.Parse(id);
+                
                 Command.Connection = connectionBD;
                 Command.CommandText = "registercliente";
                 Command.CommandType = CommandType.StoredProcedure;
@@ -64,7 +65,7 @@ namespace ExamenArmijos.model
                 Command.Parameters.AddWithValue("@cedula", cedula);
                 Command.Parameters.AddWithValue("@nombre", nombre);
                 Command.Parameters.AddWithValue("@apellido", apellido);
-                Command.Parameters.AddWithValue("@genero", genero);
+                Command.Parameters.AddWithValue("@genero", genero.ToString());
                 Command.Parameters.AddWithValue("@fechanac", fechanac);
                 Command.Parameters.AddWithValue("@cat", categoria);
                 connectionBD.Open();

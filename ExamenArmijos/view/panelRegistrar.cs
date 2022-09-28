@@ -26,7 +26,7 @@ namespace ExamenArmijos.view
 
         private void button1_Click(object sender, EventArgs e)
         {
-            met.registerClient(txtid.Text, txtcedula.Text, txtnombre.Text, txtapellido.Text, cmbsexo.SelectedItem.ToString(), txtfecha.Text);
+            met.registerClient(txtid.Text, txtcedula.Text, txtnombre.Text, txtapellido.Text, cmbsexo.SelectedIndex.ToString(), txtfecha.Text);
         }
     }
 }
